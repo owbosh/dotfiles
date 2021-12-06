@@ -6,7 +6,7 @@ set drawbox on
 set mouse on
 set hidden on
 # interpreter for shell commands
-set shell dash
+set shell zsh
 
 # set '-eu' options for shell commands
 # These options are used to have safer shell commands. Option '-e' is used to
@@ -106,7 +106,7 @@ cmd zip ${{
     rm -rf $1
 }}
 
-cmd nsxiv ${{
-	nsxiv-rifle $f || nsxiv -t $PWD
+cmd sxiv ${{
+	dwmswallow $WINDOWID ; sxiv -t $PWD
 }}
-map <c-n> nsxiv
+map <c-n> sxiv
