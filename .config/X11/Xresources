@@ -1,0 +1,45 @@
+Xcursor.size: 24 
+
+*.dpi: 120
+*.font: Iosevka:size=12:dpi=120:antialias=true:autohint=true; 	
+
+*.alpha: 	0.65
+*.window.alpha: 0.65
+
+! special
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
+
+! black
+*.color0:       #1d1f21
+*.color8:       #969896
+
+! red
+*.color1:       #cc342b
+*.color9:       #e63930
+
+! green
+*.color2:       #198844
+*.color10:      #13a151
+
+! yellow
+*.color3:       #fba922
+*.color11:      #ffae21
+
+! blue
+*.color4:       #3971ed
+*.color12:      #3d84ff
+
+! magenta
+*.color5:       #a36ac7
+*.color13:      #b877e0
+
+! cyan
+*.color6:       #3971ed
+*.color14:      #3d7bff
+
+! white
+*.color7:       #c5c8c6
+*.color15:      #ffffff
+
