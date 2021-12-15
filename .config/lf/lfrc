@@ -2,7 +2,7 @@ set ratios 1:2:2
 set cleaner ~/.config/lf/cleaner
 set previewer ~/.config/lf/preview
 set icons on
-set drawbox on
+# set drawbox on
 set mouse on
 set hidden on
 # interpreter for shell commands
@@ -50,6 +50,11 @@ cmd open ${{
     esac
 }}
 
+map <m-up> up
+map <m-down> down
+map <m-1> open
+map <m-2> updir
+
 # define a custom 'rename' command without prompt for overwrite
 # cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
 # map r push :rename<space>
@@ -72,7 +77,7 @@ cmd trash %set -f; mv $fx ~/.trash
 
 # use '<delete>' key for either 'trash' or 'delete' command
 # map <delete> trash
-# map <delete> delete
+map <delete> delete
 
 # extract the current file with the right command
 # (xkcd link: https://xkcd.com/1168/)
@@ -107,6 +112,6 @@ cmd zip ${{
 }}
 
 cmd sxiv ${{
-	dwmswallow $WINDOWID ; sxiv -t $PWD
+	sxiv -o -t $PWD | dragon-drag-and-drop -I &>/dev/null
 }}
-map <c-n> sxiv
+map x sxiv

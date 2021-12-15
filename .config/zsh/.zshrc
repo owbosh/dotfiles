@@ -2,8 +2,8 @@ autoload -U colors && colors
 
 (( $+commands[colorscript] )) && colorscript random # random term-color ascii
 
-PROMPT="%B%n%b %F{#3971ed}%d%f > " # two-sided prompt
-RPROMPT="[%F{yellow}%?%f]" # exit status on the right
+PROMPT="%B%n%b %F{#caa9fa}%d%f > " # two-sided prompt
+RPROMPT="[%F{#8be9fd}%?%f]" # exit status on the right
 
 setopt autocd # cd by only typing the directory
 stty stop undef	# disable ctrl-s to freeze terminal
@@ -36,6 +36,8 @@ fzfo () {
 }
 bindkey -s '^o' 'fzfo\n'
 
+alias pac-clean='sudo pacman -Qtdq | sudo pacman -Rns '
+
 alias c='clear'
 alias vim='nvim'
 alias startx='startx "~/.config/X11/xinitrc"'
@@ -46,6 +48,7 @@ alias kms='loginctl terminate-user $USER'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias discord='discord --disable-smooth-scrolling'
+alias poly='killall polybar && polybar owbar & disown'
 
 
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh

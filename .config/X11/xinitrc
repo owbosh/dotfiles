@@ -25,6 +25,5 @@ picom --experimental-backends -b &
 xset r rate 250 50 &
 xsetwacom --set "Wacom Intuos Pro M Pen stylus" MapToOutput HEAD-0 &
 setxkbmap -option caps:swapescape &
-feh --bg-fill ~/img/current-wall --no-fehbg &
-dwmblocks &
-exec dwm & sleeper.sh
+feh --bg-fill ~/img/wallpapers/.current-wall --no-fehbg &
+exec bspwm

@@ -11,11 +11,11 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 
 export BROWSER=firefox
-export TERMINAL=st
+export TERMINAL=kitty
 export EDITOR=vim
 
 # export GTK_USE_PORTAL=1
-export GTK_THEME=Adwaita:dark
+export GTK_THEME=Dracula
 export FZF_DEFAULT_OPTS="--height 35%"
 
 source "$XDG_CONFIG_HOME"/lf/icons.sh
