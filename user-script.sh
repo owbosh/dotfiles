@@ -25,3 +25,9 @@ cp -rf $(dirname $(realpath "$0"))/.config/* ~/.config
 # copy in scripts
 mkdir -p ~/.local/bin
 cp -rf $(dirname $(realpath "$0"))/.local/bin/* ~/.local/bin
+# set wallpaper
+mkdir -p ~/img/wallpapers
+cp $(dirname $(realpath "$0"))/swamp.jpg ~/img/wallpapers
+cp -l ~/img/wallpapers/swamp.jpg ~/img/wallpapers/.current-wallpaper
+# done
+reboot
