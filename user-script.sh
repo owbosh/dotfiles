@@ -32,4 +32,4 @@ mkdir -p ~/img/wallpapers
 cp $(dirname $(realpath "$0"))/swamp.jpg ~/img/wallpapers
 cp -l ~/img/wallpapers/swamp.jpg ~/img/wallpapers/.current-wallpaper
 # done
-reboot
+echo "Complete, exit back to the live environment and reboot"
