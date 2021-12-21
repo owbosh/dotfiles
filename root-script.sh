@@ -2,7 +2,7 @@
 
 # sudo no password rights
 sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
-# pacman parallel downloading
+# pacman parallel downloads
 sed -i 's/^#Para/Para/' /etc/pacman.conf
 # pacman colors
 sed -i 's/^#Color/Color/' /etc/pacman.conf
@@ -42,6 +42,7 @@ noto-fonts-cjk \
 noto-fonts-emoji \
 picom \
 polybar \
+poppler \
 ranger \
 rofi \
 steam \
