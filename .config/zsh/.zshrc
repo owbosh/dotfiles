@@ -1,7 +1,5 @@
 autoload -U colors && colors
 
-(( $+commands[colorscript] )) && colorscript random # random term-color ascii
-
 PROMPT="%B%n%b %F{#caa9fa}%d%f > " # two-sided prompt
 RPROMPT="[%F{#8be9fd}%?%f]" # exit status on the right
 

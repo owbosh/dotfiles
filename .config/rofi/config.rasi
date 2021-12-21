@@ -1,0 +1,174 @@
+    configuration {
+    modi: [window,run,ssh,drun];
+    show-icons: true;
+    hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+    location: 6;
+}
+* {
+    red:                         rgba ( 255, 85, 85, 100 % );
+    white:                       rgba ( 230, 230, 230, 100 % );
+    purple:                      rgba ( 202, 169, 250, 100 % );
+    blue:                        rgba ( 154, 237, 254, 100 % );
+    background:                  rgba ( 25, 26, 33, 100 % );
+    foreground:                  var(white);
+    separatorcolor:              var(white);
+    background-color:            transparent;
+    border-color:                var(foreground);
+    
+    active-foreground:           var(purple);
+    active-background:           var(background);
+    
+    normal-foreground:           var(foreground);
+    normal-background:           transparent;
+
+    urgent-foreground:           var(red);
+    urgent-background:           transparent;
+
+    selected-normal-foreground:  var(background);
+    selected-normal-background:  var(blue);
+
+    selected-urgent-foreground:  var(background);
+    selected-urgent-background:  var(red);
+
+    selected-active-foreground:  var(background); 
+    selected-active-background:  var(blue);
+    font: "monospace 13";
+}
+element {
+    cursor:  pointer;
+    spacing: 0;
+    border:  0;
+}
+element normal.normal, element.alternate.normal {
+    background-color: var(normal-background);
+    text-color:       var(purple);
+}
+element normal.urgent, element.alternate.urgent {
+    background-color: var(urgent-background);
+    text-color:       var(urgent-foreground);
+}
+element normal.active, element.alternate.active {
+    background-color: var(active-background);
+    text-color:       var(active-foreground);
+}
+element selected.normal {
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
+    border-radius: 5;
+}
+element selected.urgent {
+    background-color: var(selected-urgent-background);
+    text-color:       var(selected-urgent-foreground);
+    border-radius: 5;
+}
+element selected.active {
+    background-color: var(selected-active-background);
+    text-color:       var(selected-active-foreground);
+    border-radius: 5;
+}
+element-text {
+    padding: 6 0 6 6;
+    background-color: transparent;
+    cursor:           inherit;
+    highlight:        inherit;
+    text-color:       inherit;
+}
+element-icon {
+    background-color: transparent;
+    size:             0.8000em ;
+    cursor:           inherit;
+    text-color:       inherit;
+    padding:      0px 0px 0px 6px ;
+}
+window {
+    padding:          20;
+    background-color: var(background);
+    border: none;
+    border-radius:    12;
+    border-color:     var(purple);
+    width: 800px;
+    margin: 42px;
+}
+mainbox {
+    padding: 0;
+    border:  0;
+}
+message {
+    padding:      1px ;
+    border-color: var(purple);
+    border:       2px solid 0px 0px ;
+}
+textbox {
+    text-color: var(foreground);
+}
+listview {
+    padding:      8px 0px 0px ;
+    scrollbar:    true;
+    border-color: var(purple);
+    spacing:      4px ;
+    fixed-height: 0;
+    border:       0px solid 0px 0px ;
+}
+scrollbar {
+    enabled: false;
+    width:        0;
+    handle-width: 0;
+}
+sidebar {
+    border-color: var(purple);
+    border:       2px solid 0px 0px ;
+}
+button {
+    cursor:     pointer;
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+button selected {
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
+}
+num-filtered-rows {
+    expand:     false;
+    text-color: Gray;
+}
+num-rows {
+    expand:     false;
+    text-color: Gray;
+}
+textbox-num-sep {
+    expand:     false;
+    str:        "/";
+    text-color: Gray;
+}
+inputbar {
+    padding:    1px ;
+    spacing:    0px ;
+    text-color: var(normal-foreground);
+    children:   [ prompt,textbox-prompt-colon,entry,num-filtered-rows,textbox-num-sep,num-rows,case-indicator ];
+}
+case-indicator {
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+entry {
+    text-color:        var(normal-foreground);
+    cursor:            text;
+    spacing:           0;
+    placeholder-color: Gray;
+    placeholder:       "Type to filter";
+    padding: 0 0 10 0;
+}
+prompt {
+    spacing:    0;
+    text-color: var(blue);
+    padding: 0 0 10 6;
+}
+textbox-prompt-colon {
+    margin:     0px 0.3000em 0.0000em 0.0000em ;
+    expand:     false;
+    str:        "  ";
+    text-color: var(blue);
+    padding: 0 0 10 0;
+}

@@ -52,12 +52,11 @@ padding-right = 2
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = monospace:size=12:dpi=120:antialias=true:autohint=true;2
-font-1 = monospace:size=14:dpi=120:antialias=true:autohint=true;3
-font-2 = monospace:size=16:dpi=120:antialias=true:autohint=true;3
-font-3 = monospace:size=18:dpi=120:antialias=true:autohint=true;5
+font-0 = JetBrainsMono Nerd Font Mono:size=12:dpi=120:antialias=true:autohint=true;2
+font-1 = JetBrainsMono Nerd Font Mono:size=18:dpi=120:antialias=true:autohint=true;5
+font-2 = JetBrainsMono Nerd Font Mono:size=22:dpi=120:antialias=true:autohint=true;5
 
-modules-left = bspwm  _  updates-pacman-aurhelper  _  pulseaudio  _  run  _  lf 
+modules-left = bspwm  _  updates-pacman-aurhelper  _  pulseaudio  _  sys  _  maim  _  run  _  ranger 
 modules-center = xwindow
 modules-right =  memory  _  cpu  _  date 
 
@@ -72,13 +71,13 @@ cursor-scroll = ns-resize
 type = custom/text
 content = ""
 content-foreground = ${colors.background-alt}
-content-font = 4
+content-font = 2
 
 [module/]
 type = custom/text
 content = ""
 content-foreground = ${colors.background-alt}
-content-font = 4
+content-font = 2
 
 [module/_]
 type = custom/text
@@ -90,32 +89,54 @@ exec = ~/.config/polybar/scripts/updates-pacman-aurhelper.sh
 click-left = $TERMINAL -e sudo pacman -Syu
 click-right = ~/.config/polybar/scripts/updates-pacman-aurhelper.sh
 interval = 600
-format-prefix = " "
-format-prefix-font = 2
+format-prefix = ""
+format-prefix-font = 3
 format-prefix-foreground = ${colors.blue}
 format-background = ${colors.background-alt}
 
 [module/run]
 type = custom/text
-content = "run"
+content = " run"
 content-background = ${colors.background-alt}
-content-prefix = " "
+content-prefix = ""
 content-prefix-foreground = ${colors.blue}
 content-prefix-background = ${colors.background-alt}
 content-prefix-font = 2
 click-left = rofi -show drun
 click-right = rofi -show run
 
-[module/lf]
+[module/maim]
 type = custom/text
-content = "lf"
+content = " maim"
 content-background = ${colors.background-alt}
-content-prefix = " "
+content-prefix = ""
 content-prefix-foreground = ${colors.blue}
 content-prefix-background = ${colors.background-alt}
-content-prefix-font = 3
-click-left = $TERMINAL -e lfrun
-click-right = $TERMINAL -e lfrun ~/img/anime
+content-prefix-font = 2
+click-left = rofi-maim.sh
+click-right = $TERMINAL -e nvim ~/.local/bin/rofi-maim.sh
+
+[module/sys]
+type = custom/text
+content = " sys"
+content-background = ${colors.background-alt}
+content-prefix = ""
+content-prefix-foreground = ${colors.blue}
+content-prefix-background = ${colors.background-alt}
+content-prefix-font = 2
+click-left = rofi-csv2menu.sh sys
+
+[module/ranger]
+type = custom/text
+content = " ranger"
+content-background = ${colors.background-alt}
+content-prefix = ""
+content-prefix-foreground = ${colors.blue}
+content-prefix-background = ${colors.background-alt}
+content-prefix-font = 2
+click-left = $TERMINAL -e ranger
+click-right = $TERMINAL -e ranger ~/img/anime
+
 
 [module/xwindow]
 type = internal/xwindow
@@ -153,8 +174,8 @@ label-urgent-padding = 1
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-font = 3
+format-prefix = ""
+format-prefix-font = 2
 format-prefix-foreground = ${colors.purple}
 label = %percentage:2%%
 format-background = ${colors.background-alt}
@@ -162,7 +183,7 @@ format-background = ${colors.background-alt}
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "  "
+format-prefix = " "
 format-prefix-font = 2
 format-prefix-foreground = ${colors.purple}
 label = %percentage_used%%
@@ -174,8 +195,8 @@ interval = 60
 date-alt = " %d/%m/%Y"
 time = %I:%M%P
 time-alt = %H:%M:%S
-format-prefix = " "
-format-prefix-font = 3
+format-prefix = ""
+format-prefix-font = 2
 format-prefix-foreground = ${colors.green}
 label = %date% %time%
 format-background = ${colors.background-alt}
@@ -187,19 +208,18 @@ label-volume = %percentage%%
 format-volume = <label-volume>
 format-volume-prefix = " "
 format-volume-prefix-foreground = ${colors.blue}
-format-volume-font = 2
+format-volume-font = 3
 format-volume-background = ${colors.background-alt}
 
 label-muted = muted
 format-muted-prefix = " "
 format-muted-prefix-foreground = ${colors.red}
-format-muted-font = 2
+format-muted-font = 3
 format-muted-foreground = ${colors.foreground-alt}
 format-muted-background = ${colors.background-alt}
 
 [settings]
 screenchange-reload = true
-terminal = kitty
 format-underline = ${colors.background}
 format-overline = ${colors.background}
 ;compositing-background = xor
