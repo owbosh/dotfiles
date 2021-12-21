@@ -4,11 +4,13 @@ cd /tmp && git clone https://aur.archlinux.org/paru.git
 cd paru && makepkg -si
 # install aur packages
 paru -S --needed --noconfirm \
-nerd-fonts-jetbrains-mono \
-pmount \
-dragon-drag-and-drop-git \
+dashbinsh \
 dracula-gtk-theme \
 dracula-icons-git \
+dragon-drag-and-drop-git \
+nerd-fonts-jetbrains-mono \
+pmount \
+polybar \
 # make home directories
 xdg-user-dirs-update
 mkdir -p ~/repo

@@ -10,7 +10,8 @@ sed -i 's/^#Color/Color/' /etc/pacman.conf
 sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 pacman -Sy --noconfirm
 # /etc/zshenv needed to make zsh look in ~/.config/zsh/
-cp -f $(dirname $(realpath "$0"))/etc/zshenv /etc/
+mkdir -p /etc/zsh
+cp -f $(dirname $(realpath "$0"))/etc/zsh/zshenv /etc/zsh
 # nvidia generated xorg.conf
 cp -f $(dirname $(realpath "$0"))/etc/X11/xorg.conf /etc/X11/
 # install official repo packages
@@ -41,7 +42,6 @@ ninja \
 noto-fonts-cjk \
 noto-fonts-emoji \
 picom \
-polybar \
 poppler \
 ranger \
 rofi \
