@@ -77,7 +77,6 @@ element-text {
 }
 element-icon {
     background-color: transparent;
-    size:             0.8000em ;
     cursor:           inherit;
     text-color:       inherit;
     padding:      0px 0px 0px 6px ;
