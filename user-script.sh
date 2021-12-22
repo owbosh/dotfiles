@@ -31,5 +31,7 @@ cd st && make DESTDIR=~/ PREFIX=.local install
 cd ~/repo && git clone https://github.com/owbosh/sxiv
 cd sxiv && make DESTDIR=~/ PREFIX=.local APP_PREFIX=.local/share/applications install
 update-desktop-database ~/.local/share/applications
+# change shell
+chsh -s /bin/zsh owbosh
 # done
 echo "Complete, exit back to the live environment and reboot"
