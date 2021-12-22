@@ -56,7 +56,7 @@ font-0 = JetBrainsMono Nerd Font Mono:size=12:dpi=120:antialias=true:autohint=tr
 font-1 = JetBrainsMono Nerd Font Mono:size=18:dpi=120:antialias=true:autohint=true;5
 font-2 = JetBrainsMono Nerd Font Mono:size=22:dpi=120:antialias=true:autohint=true;5
 
-modules-left = bspwm  _  updates-pacman-aurhelper  _  pulseaudio  _  sys  _  maim  _  run  _  ranger 
+modules-left = bspwm  _  updates-pacman-aurhelper  _  pulseaudio  _  maim  _  run  _  ranger 
 modules-center = xwindow
 modules-right =  memory  _  cpu  _  date 
 

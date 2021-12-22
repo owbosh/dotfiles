@@ -13,6 +13,9 @@ sudo mkdir -p /etc/zsh
 sudo cp -f $(dirname $(realpath "$0"))/etc/zsh/zshenv /etc/zsh
 # nvidia generated xorg.conf
 sudo cp -f $(dirname $(realpath "$0"))/etc/X11/xorg.conf /etc/X11/
+# autologin getty
+sudo mkdir -p /etc/systemd/getty@tty1.service.d
+sudo cp -f $(dirname $(realpath "$0"))/etc/systemd/getty@tty1.service.d/override.conf /etc/systemd/getty@tty1.service.d
 # install official repo packages
 sudo pacman -S --needed --noconfirm \
 amd-ucode \
@@ -35,6 +38,7 @@ imagemagick \
 keepassxc \
 libva-vdpau-driver \
 linux-headers \
+maim \
 meson \
 mpv \
 neofetch \
@@ -42,18 +46,19 @@ neovim \
 ninja \
 noto-fonts-cjk \
 noto-fonts-emoji \
+pacman-contrib \
 picom \
 poppler \
 ranger \
 rofi \
 steam \
 sxhkd \
-ttf-fira-sans \
 ueberzug \
 wget \
 xclip \
 xcolor \
 xdotool \
+xorg-xsetroot \
 yt-dlp \
 zsh \
 zsh-autosuggestions \
@@ -91,6 +96,8 @@ cd st && sudo make install
 cd ~/repo && git clone https://github.com/owbosh/sxiv
 cd sxiv && sudo make install
 update-desktop-database ~/.local/share/applications
+# install ranger icons
+cd ~/.config/ranger/plugins/ && git clone https://github.com/alexanderjeurissen/ranger_devicons
 # change shell
 chsh -s /bin/zsh owbosh
 # done
