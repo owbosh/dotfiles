@@ -28,6 +28,8 @@ extra-cmake-modules \
 feh \
 ffmpegthumbnailer \
 firefox \
+firefox-dark-reader \
+firefox-ublock-origin \
 fzf \
 gnome-epub-thumbnailer \
 imagemagick \
