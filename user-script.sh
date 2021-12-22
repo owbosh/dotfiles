@@ -10,8 +10,8 @@ mkdir -p ~/img/wallpapers
 cp $(dirname $(realpath "$0"))/swamp.jpg ~/img/wallpapers
 cp -l ~/img/wallpapers/swamp.jpg ~/img/wallpapers/.current-wallpaper
 # install paru
-cd /tmp && git clone https://aur.archlinux.org/paru.git
-cd paru && makepkg -si
+cd /tmp && git clone https://aur.archlinux.org/paru-bin.git
+cd paru-bin && makepkg -si
 # install aur packages
 paru -S --needed --noconfirm \
 dashbinsh \
