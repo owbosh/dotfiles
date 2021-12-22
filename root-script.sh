@@ -22,7 +22,6 @@ bat \
 bspwm \
 cmake \
 code \
-dashbinsh \
 discord \
 dunst \
 extra-cmake-modules \
