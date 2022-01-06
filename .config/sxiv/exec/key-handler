@@ -1,7 +1,10 @@
 #!/bin/sh
 case "$1" in
-	"c")      xclip -in -filter | tr '\n' ' ' | xclip -in -selection clipboard ;;	
+	"c")      xclip -in -filter | sed -e 's@^@'"$HOME/"'@;s/ /\n/g' | xclip -in -selection clipboard ;;
+	"v")      read path && xclip -in -filter | sed -e 's@^@'"$HOME/"'@;s/ /\n/g' | xclip -in "$path" -selection clipboard -target 'image/png' ;;
 	"x")      dragon-drag-and-drop -x -I ;;
 	"m")      read path && mpv $path ;;
 	"w")      read path && cp -lf $path ~/img/wallpapers/.current-wall && feh --bg-fill ~/img/wallpapers/.current-wall --no-fehbg ;;
 esac
+/home/owbosh/img/anime/1629233269427.png
+

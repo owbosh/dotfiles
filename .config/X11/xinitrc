@@ -26,4 +26,6 @@ xset r rate 250 50 &
 xsetwacom --set "Wacom Intuos Pro M Pen stylus" MapToOutput HEAD-0 &
 setxkbmap -option caps:swapescape &
 feh --bg-fill ~/img/wallpapers/.current-wall --no-fehbg &
+firefox &
+discord --disable-smooth-scrolling &
 exec bspwm

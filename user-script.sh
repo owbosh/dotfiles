@@ -14,8 +14,10 @@ sudo cp -f $(dirname $(realpath "$0"))/etc/zsh/zshenv /etc/zsh
 # nvidia generated xorg.conf
 sudo cp -f $(dirname $(realpath "$0"))/etc/X11/xorg.conf /etc/X11/
 # autologin getty
-sudo mkdir -p /etc/systemd/getty@tty1.service.d
-sudo cp -f $(dirname $(realpath "$0"))/etc/systemd/getty@tty1.service.d/override.conf /etc/systemd/getty@tty1.service.d
+sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
+sudo cp -f $(dirname $(realpath "$0"))/etc/systemd/system/getty@tty1.service.d/override.conf /etc/systemd/system/getty@tty1.service.d
+sudo systemctl daemon-reload
+
 # install official repo packages
 sudo pacman -S --needed --noconfirm \
 amd-ucode \
@@ -36,6 +38,7 @@ fzf \
 gnome-epub-thumbnailer \
 imagemagick \
 keepassxc \
+krita \
 libva-vdpau-driver \
 linux-headers \
 maim \
@@ -44,11 +47,13 @@ mpv \
 neofetch \
 neovim \
 ninja \
+noto-fonts \
 noto-fonts-cjk \
 noto-fonts-emoji \
 pacman-contrib \
 picom \
 poppler \
+python-pyqt5 \
 ranger \
 rofi \
 steam \
@@ -58,6 +63,7 @@ wget \
 xclip \
 xcolor \
 xdotool \
+xf86-input-wacom \
 xorg-xsetroot \
 yt-dlp \
 zsh \

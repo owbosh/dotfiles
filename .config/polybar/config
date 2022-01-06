@@ -113,8 +113,8 @@ content-prefix = ""
 content-prefix-foreground = ${colors.blue}
 content-prefix-background = ${colors.background-alt}
 content-prefix-font = 2
-click-left = rofi-maim.sh
-click-right = $TERMINAL -e nvim ~/.local/bin/rofi-maim.sh
+click-left = maim.sh
+click-right = $TERMINAL -e nvim ~/.local/bin/maim.sh
 
 [module/sys]
 type = custom/text
